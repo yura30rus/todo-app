@@ -1,6 +1,6 @@
 package monopoly
 
-type TodoList struct {
+type TodoШеуь struct {
 	Id          int    `json:"id"`
 	Title       string `json:"title"`
 	Description string `json:"description"`
