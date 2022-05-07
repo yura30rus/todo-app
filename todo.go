@@ -1,4 +1,4 @@
-package monopoly
+package todo_app
 
 type TodoШеуь struct {
 	Id          int    `json:"id"`

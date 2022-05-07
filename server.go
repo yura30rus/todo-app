@@ -1,4 +1,4 @@
-package monopoly
+package todo_app
 
 import (
 	"context"

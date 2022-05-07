@@ -1,4 +1,4 @@
-package monopoly
+package todo_app
 
 type User struct {
 	Id       int    `json:"-"`
