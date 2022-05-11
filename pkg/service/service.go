@@ -1,8 +1,12 @@
 package service
 
-import "github.com/yura30rus/todo-app/pkg/repository"
+import (
+	todo_app "github.com/yura30rus/todo-app"
+	"github.com/yura30rus/todo-app/pkg/repository"
+)
 
 type Authorization interface {
+	CreateUser(user todo_app.User) (int, error)
 }
 
 type TodoList interface {
@@ -18,5 +22,7 @@ type Service struct {
 }
 
 func NewService(repos *repository.Repository) *Service {
-	return &Service{}
+	return &Service{
+		Authorization: NewAuthService(repos.Authorization),
+	}
 }
